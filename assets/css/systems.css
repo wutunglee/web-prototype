@@ -1,0 +1,219 @@
+/* =====================================================
+   PulsarPump – Systems Pages
+   Depends on base.css
+===================================================== */
+
+/* ---------- Hero (systems only) ---------- */
+.hero{
+  background:#111;
+  color:#fff;
+  border-bottom:1px solid #111;
+}
+.hero p{ color:#d8d8d8; }
+
+.hero-inner{
+  padding:64px 24px 56px 24px;
+}
+
+.hero-cta{
+  margin-top:22px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.hero .btn-primary{
+  background:#fff;
+  color:#111;
+  font-weight:650;
+}
+.hero .btn-secondary{
+  color:#fff;
+  border-bottom:1px solid #fff;
+}
+
+/* ---------- Meta pills ---------- */
+.meta{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:14px;
+  color:var(--muted);
+  font-size:14px;
+}
+.pill{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:6px 12px;
+  background:#fff;
+}
+
+/* ---------- Systems overview diagram ---------- */
+.viz{
+  margin-top:20px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+}
+.viz-inner{ padding:14px; }
+
+.hint{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ---------- System cards ---------- */
+.sys-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  background:#fff;
+}
+
+.sys-card .tag{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.sys-card ul{
+  margin:12px 0 0 0;
+  padding-left:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+.sys-card li{
+  margin-bottom:6px;
+}
+
+.sys-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:14px;
+}
+
+/* ---------- Flow / alignment blocks ---------- */
+.flow{
+  background:var(--soft);
+}
+
+.flow-steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+.step{
+  border-top:1px solid var(--text);
+  padding-top:12px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.mini{
+  border-top:1px solid var(--text);
+  padding-top:12px;
+  color:var(--muted);
+  font-size:14px;
+}
+.mini strong{
+  color:var(--text);
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:600px){
+  .hero-inner{
+    padding:52px 20px 46px 20px;
+  }
+}
+/* =====================================================
+   System Hero – Unified Spec
+===================================================== */
+
+.system-hero{
+  background:#111;
+  color:#fff;
+}
+
+.system-kicker{
+  font-size:13px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#aaa;
+  margin-bottom:10px;
+}
+
+.system-desc{
+  max-width:640px;
+  font-size:16px;
+  line-height:1.7;
+  color:#d8d8d8;
+}
+
+.system-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+  padding:0;
+  list-style:none;
+}
+
+.system-tags li{
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:999px;
+  padding:6px 12px;
+  font-size:13px;
+  color:#fff;
+}
+
+/* CTA already defined in hero-cta (reuse) */
+
+/* ---------- System Variants ---------- */
+
+/* Performance Core */
+.system-hero--performance{
+  background:#111;
+}
+
+/* Neural Drive */
+.system-hero--neural{
+  background:#0f0f0f;
+}
+
+/* Recovery Base */
+.system-hero--recovery{
+  background:#101417;
+}
+
+/* Energy Rebuild */
+.system-hero--energy{
+  background:#121212;
+}
+
+.breadcrumb{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:rgba(255,255,255,0.65);
+  margin-bottom:14px;
+}
+
+.breadcrumb a{
+  color:rgba(255,255,255,0.85);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+
+.breadcrumb a:hover{
+  border-bottom-color:rgba(255,255,255,0.6);
+}
+
+.breadcrumb span{
+  white-space:nowrap;
+}

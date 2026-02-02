@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulsarPump Homepage Prototype v3</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e5e5e5;
+      --soft: #f7f7f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans TC", "PingFang TC", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 600;
+      max-width: 760px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 20px;
+    }
+
+    .cta a {
+      text-decoration: none;
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 4px;
+      font-weight: 500;
+    }
+
+    /* DECISION */
+    .decision-intro {
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+
+    .decision-item {
+      border-top: 1px solid var(--text);
+      padding-top: 18px;
+    }
+
+    .decision-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* SYSTEMS */
+    .system-intro {
+      margin-bottom: 48px;
+      max-width: 620px;
+      color: var(--muted);
+    }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 48px;
+    }
+
+    .system h3 {
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    .system small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .system p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .system ul {
+      padding-left: 18px;
+      margin-bottom: 16px;
+    }
+
+    .system li {
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .system a {
+      text-decoration: none;
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+      font-size: 14px;
+    }
+
+    /* TRUST */
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* CAMPAIGN */
+    .campaign {
+      background: var(--soft);
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 20px; }
+      .hero { min-height: 55vh; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>為耐力訓練與高壓環境而設計的運動補給系統</h1>
+    <p>
+      PulsarPump 由醫師研發，專注於長時間、高心率與炎熱條件下，
+      仍能被身體穩定使用的補給策略。
+    </p>
+    <div class="cta">
+      <a href="#">依訓練狀態選擇補給</a>
+      <a href="#">查看所有產品</a>
+    </div>
+  </div>
+</section>
+
+<!-- DECISION -->
+<section>
+  <div class="container">
+    <div class="decision-intro">
+      先選擇你目前最需要處理的訓練狀態，我們會帶你到適合的補給方向。
+    </div>
+    <div class="decision-grid">
+      <div class="decision-item"><strong>🔥 炎熱高溫</strong><br><span>高環境負荷與流汗條件</span></div>
+      <div class="decision-item"><strong>🏃 長距離訓練</strong><br><span>穩定輸出與後段表現</span></div>
+      <div class="decision-item"><strong>⚡ 高強度啟動</strong><br><span>比賽日與關鍵訓練</span></div>
+      <div class="decision-item"><strong>🔄 恢復與重建</strong><br><span>日常與訓練後基礎補給</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section>
+  <div class="container">
+    <div class="system-intro">
+      PulsarPump 並非以單一產品思考補給，而是依照訓練流程，
+      建立可長期使用的三大補給系統。
+    </div>
+
+    <div class="system-grid">
+
+      <div class="system">
+        <h3>競速雙星 Performance Core</h3>
+        <small>耐力 × 高溫的核心輸出系統</small>
+        <p>
+          為長距離與高環境負荷條件所設計，
+          在最困難的狀態下維持穩定輸出。
+        </p>
+        <ul>
+          <li>NOXX 氮能雙效膠</li>
+          <li>CramPeace 勁速補</li>
+        </ul>
+        <a href="#">了解競速雙星系統</a>
+      </div>
+
+      <div class="system">
+        <h3>高強度啟動 Neural Drive</h3>
+        <small>訓練前與關鍵時刻的啟動策略</small>
+        <p>
+          協助身體進入工作狀態，
+          而非依賴短暫刺激的啟動方式。
+        </p>
+        <ul>
+          <li>Pre-Workout 粉劑系列</li>
+          <li>能量軟糖</li>
+        </ul>
+        <a href="#">了解啟動系統</a>
+      </div>
+
+      <div class="system">
+        <h3>恢復與重建 Recovery Base</h3>
+        <small>長期訓練的基礎能量系統</small>
+        <p>
+          作為日常與訓練後使用的基礎補給，
+          支援長期訓練與身體重建。
+        </p>
+        <ul>
+          <li>肌酸</li>
+          <li>核糖</li>
+          <li>麩醯胺酸</li>
+        </ul>
+        <a href="#">了解恢復與重建系統</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section>
+  <div class="container">
+    <div class="trust">
+      <div>醫師研發與臨床背景</div>
+      <div>成分比例與科學邏輯</div>
+      <div>以亞洲氣候與耐力運動為設計前提</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPAIGN -->
+<section class="campaign">
+  <div class="container">
+    <h3>馬年補給・限定組合</h3>
+    <p>為賽季與高訓練量時期準備的補給組合方案。</p>
+  </div>
+</section>
+
+</body>
+</html>

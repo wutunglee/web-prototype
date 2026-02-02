@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>從訓練狀態開始選擇補給｜PulsarPump</title>
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --line:#e5e5e5;
+      --soft:#f7f7f7;
+    }
+
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",
+      "Noto Sans TC","PingFang TC",sans-serif;
+      color:var(--text);
+      line-height:1.65;
+      background:#fff;
+    }
+
+    section{
+      padding:72px 24px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    h1{
+      font-size:clamp(28px,5vw,44px);
+      margin-bottom:16px;
+    }
+
+    h2{
+      font-size:24px;
+      margin-bottom:14px;
+    }
+
+    h3{
+      font-size:18px;
+      margin-bottom:10px;
+    }
+
+    p{
+      color:var(--muted);
+      max-width:760px;
+      margin-bottom:18px;
+    }
+
+    /* intro */
+    .intro p{
+      font-size:17px;
+    }
+
+    /* cards */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:32px;
+      margin-top:40px;
+    }
+
+    .card{
+      border-top:1px solid var(--text);
+      padding-top:16px;
+    }
+
+    .tag{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .card a{
+      display:inline-block;
+      margin-top:12px;
+      text-decoration:none;
+      color:var(--text);
+      border-bottom:1px solid var(--text);
+      font-size:14px;
+      padding-bottom:2px;
+    }
+
+    /* helper strip */
+    .helper{
+      background:var(--soft);
+    }
+
+    .pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .pill{
+      font-size:14px;
+      border:1px solid var(--line);
+      padding:8px 14px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--muted);
+    }
+
+    .pill a{
+      color:var(--text);
+      text-decoration:none;
+      margin-left:6px;
+      border-bottom:1px solid var(--text);
+    }
+
+    @media(max-width:600px){
+      section{padding:56px 20px;}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Intro -->
+<section class="intro">
+  <div class="container">
+    <h1>先從訓練狀態開始<br/>再選擇補給策略</h1>
+    <p>
+      PulsarPump 不鼓勵「看成分就買」。
+      我們把補給視為訓練的一部分，
+      先理解你此刻的訓練狀態，再決定該用哪一套策略。
+    </p>
+    <p>
+      以下四種情境，是多數運動者最常遇到的狀態。
+      你不需要一次選對全部，只要先找到最貼近現在的那一種。
+    </p>
+  </div>
+</section>
+
+<!-- Situation Cards -->
+<section>
+  <div class="container">
+    <h2>你現在最接近哪一種訓練狀態？</h2>
+
+    <div class="cards">
+
+      <!-- Performance Core : Heat -->
+      <div class="card">
+        <div class="tag">🔥 炎熱高溫</div>
+        <h3>在高溫下維持穩定輸出</h3>
+        <p>
+          適合悶熱、流汗量大或容易補給失序的情境。
+          重點不是補更多，而是讓能量與電解質輸出保持穩定。
+        </p>
+        <a href="/systems/performance-core">
+          查看建議系統 → 穩定輸出（Performance Core）
+        </a>
+      </div>
+
+      <!-- Performance Core : Endurance -->
+      <div class="card">
+        <div class="tag">🏃 長距離耐力</div>
+        <h3>把節奏撐到後段</h3>
+        <p>
+          適合長時間訓練、馬拉松或耐力型活動。
+          這條路線處理的是時間累積後，
+          如何避免前段錯誤在後段被放大。
+        </p>
+        <a href="/systems/performance-core">
+          查看建議系統 → 穩定輸出（Performance Core）
+        </a>
+      </div>
+
+      <!-- Neural Drive -->
+      <div class="card">
+        <div class="tag">⚡ 高強度啟動</div>
+        <h3>比賽日、關鍵課表與接近力竭的時刻</h3>
+        <p>
+          適合高強度訓練、間歇、重量訓練或比賽日。
+          不只幫助你進入工作狀態，
+          也在接近力竭時，協助你把輸出再往前推一點。
+        </p>
+        <a href="/systems/neural-drive">
+          查看建議系統 → 兩段式高強度啟動
+        </a>
+      </div>
+
+      <!-- Recovery Base -->
+      <div class="card">
+        <div class="tag">🔄 恢復與重建</div>
+        <h3>讓下一堂課準備好</h3>
+        <p>
+          適合高訓練量週期、作息不穩或需要長期累積的狀態。
+          這條路線重視的是恢復底盤與訓練的可持續性。
+        </p>
+        <a href="/systems/recovery-base">
+          查看建議系統 → 恢復與重建
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Helper -->
+<section class="helper">
+  <div class="container">
+    <h2>快速對照</h2>
+    <p>
+      如果你不確定該從哪一個開始，可以用下面這些情境快速比對。
+    </p>
+
+    <div class="pills">
+      <div class="pill">
+        今天很熱、流汗多 →
+        <a href="/systems/performance-core">穩定輸出</a>
+      </div>
+      <div class="pill">
+        今天要跑很久 →
+        <a href="/systems/performance-core">穩定輸出</a>
+      </div>
+      <div class="pill">
+        今天是比賽日／最後一組 →
+        <a href="/systems/neural-drive">高強度啟動</a>
+      </div>
+      <div class="pill">
+        最近訓練量很高 →
+        <a href="/systems/recovery-base">恢復與重建</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

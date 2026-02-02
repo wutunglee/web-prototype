@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <title>從訓練狀態開始選擇補給｜PulsarPump</title>
+
+  <style>
+    .intro p{ font-size:17px; }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:32px;
+      margin-top:40px;
+    }
+
+    .card{
+      border-top:1px solid var(--text);
+      padding-top:16px;
+    }
+
+    .tag{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    /* helper section background */
+    .helper{ background:var(--soft); }
+
+    .pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .pill{
+      font-size:14px;
+      border:1px solid var(--line);
+      padding:8px 14px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Intro -->
+<section class="intro">
+  <div class="container">
+    <h1>先從訓練狀態開始<br/>再選擇補給策略</h1>
+    <p>
+      PulsarPump 不鼓勵「看成分就買」。
+      我們把補給視為訓練的一部分，
+      先理解你此刻的訓練狀態，再決定該用哪一套策略。
+    </p>
+    <p>
+      以下四種情境，是多數運動者最常遇到的狀態。
+      你不需要一次選對全部，只要先找到最貼近現在的那一種。
+    </p>
+  </div>
+</section>
+
+<!-- Situation Cards -->
+<section>
+  <div class="container">
+    <h2>你現在最接近哪一種訓練狀態？</h2>
+
+    <div class="cards">
+
+      <!-- Performance Core : Heat -->
+      <div class="card">
+        <div class="tag">🔥 炎熱高溫</div>
+        <h3>在高溫下維持穩定輸出</h3>
+        <p>
+          適合悶熱、流汗量大或容易補給失序的情境。
+          重點不是補更多，而是讓能量與電解質輸出保持穩定。
+        </p>
+        <a class="link-underline" href="../systems/performance-core.html">
+          查看建議系統 → 穩定輸出（Performance Core）
+        </a>
+      </div>
+
+      <!-- Performance Core : Endurance + Energy Rebuild hint -->
+      <div class="card">
+        <div class="tag">🏃 長距離耐力</div>
+        <h3>把節奏撐到後段</h3>
+        <p>
+          適合長時間訓練、馬拉松或耐力型活動。
+          這條路線處理的是時間累積後的節奏與補給穩定性。
+        </p>
+        <p>
+          若你在高訓練量週期中，感覺「課表越來越難完成」，
+          可能需要進一步處理能量重建。
+        </p>
+        <a class="link-underline" href="../systems/performance-core.html">
+          查看建議系統 → 穩定輸出（Performance Core）
+        </a>
+        <br/>
+        <a class="link-underline" href="../systems/energy-rebuild.html">
+          延伸判斷 → 能量重建（Energy Rebuild）
+        </a>
+      </div>
+
+      <!-- Neural Drive -->
+      <div class="card">
+        <div class="tag">⚡ 高強度啟動</div>
+        <h3>比賽日、關鍵課表與接近力竭的時刻</h3>
+        <p>
+          適合高強度訓練、間歇、重量訓練或比賽日。
+          不只幫助你進入工作狀態，
+          也在接近力竭時，協助你把輸出再往前推一點。
+        </p>
+        <a class="link-underline" href="../systems/neural-drive.html">
+          查看建議系統 → 兩段式高強度啟動
+        </a>
+      </div>
+
+      <!-- Recovery Base (clarified) -->
+      <div class="card">
+        <div class="tag">🔄 恢復與重建</div>
+        <h3>讓身體回到可訓練狀態</h3>
+        <p>
+          適合高訓練量週期、作息不穩或需要長期累積的狀態。
+          這條路線處理的是日常恢復底盤，
+          而不是能量再生或輸出能力提升。
+        </p>
+        <a class="link-underline" href="../systems/recovery-base.html">
+          查看建議系統 → 恢復與重建（Recovery Base）
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Helper -->
+<section class="helper">
+  <div class="container">
+    <h2>快速對照</h2>
+    <p>
+      如果你不確定該從哪一個開始，可以用下面這些情境快速比對。
+    </p>
+
+    <div class="pills">
+      <div class="pill">
+        今天很熱、流汗多 →
+        <a class="link-underline" href="../systems/performance-core.html">穩定輸出</a>
+      </div>
+      <div class="pill">
+        今天要跑很久 →
+        <a class="link-underline" href="../systems/performance-core.html">穩定輸出</a>
+      </div>
+      <div class="pill">
+        連續多天訓練、覺得回不來 →
+        <a class="link-underline" href="../systems/energy-rebuild.html">能量重建</a>
+      </div>
+      <div class="pill">
+        今天是比賽日／最後一組 →
+        <a class="link-underline" href="../systems/neural-drive.html">高強度啟動</a>
+      </div>
+      <div class="pill">
+        最近訓練量很高、作息不穩 →
+        <a class="link-underline" href="../systems/recovery-base.html">恢復與重建</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
