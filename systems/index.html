@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>PulsarPump｜Systems</title>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/systems.css">
+
+  <style>
+    /* page-only: make it quieter */
+    .system-desc{
+      max-width:760px;
+    }
+    .system-desc.muted{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:8px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:32px;
+      margin-top:40px;
+    }
+
+    .sys-card{
+      border-top:1px solid var(--text);
+      padding-top:16px;
+    }
+
+    .sys-card h3{
+      margin-bottom:8px;
+    }
+
+    .sys-card p{
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.65;
+      margin-bottom:12px;
+    }
+
+    .hint{
+      margin-top:32px;
+      font-size:13px;
+      color:var(--muted);
+      max-width:760px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero system-hero system-hero--systems">
+
+  <!-- Logo -->
+  <div class="hero-topbar">
+    <div class="container">
+      <a class="brand" href="../index.html" aria-label="PulsarPump 首頁">
+        <img src="../assets/img/pulsarpumplogo_white.png" alt="PulsarPump">
+      </a>
+    </div>
+  </div>
+
+  <div class="container hero-inner">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">首頁</a>
+      <span>/</span>
+      <span>Systems</span>
+    </nav>
+
+    <h1>四大補給系統</h1>
+
+    <p class="system-desc">
+      PulsarPump 的補給不是單一產品，
+      而是依照不同訓練狀態設計的四個系統。
+    </p>
+
+    <p class="system-desc muted">
+      如果你已經知道自己需要什麼，可以直接點進去。
+      如果不確定，建議先從
+      <a class="link-underline" href="../start/index.html">從訓練狀態開始</a>。
+    </p>
+
+  </div>
+</section>
+
+<!-- SYSTEM MAP -->
+<section>
+  <div class="container">
+
+    <div class="grid">
+
+      <!-- Performance Core -->
+      <div class="sys-card">
+        <h3>Performance Core</h3>
+        <p>
+          穩定輸出。<br/>
+          適用於高溫、長距離與長時間高心率，
+          當補給開始影響節奏時。
+        </p>
+        <a class="link-underline" href="../systems/performance-core.html">
+          View system →
+        </a>
+      </div>
+
+      <!-- Neural Drive -->
+      <div class="sys-card">
+        <h3>Neural Drive</h3>
+        <p>
+          高強度啟動。<br/>
+          適用於比賽日、間歇訓練與需要關鍵輸出的時刻。
+        </p>
+        <a class="link-underline" href="../systems/neural-drive.html">
+          View system →
+        </a>
+      </div>
+
+      <!-- Recovery Base -->
+      <div class="sys-card">
+        <h3>Recovery Base</h3>
+        <p>
+          日常恢復底盤。<br/>
+          支持高訓練量與長期訓練累積，
+          不追求即時刺激。
+        </p>
+        <a class="link-underline" href="../systems/recovery-base.html">
+          View system →
+        </a>
+      </div>
+
+      <!-- Energy Rebuild -->
+      <div class="sys-card">
+        <h3>Energy Rebuild</h3>
+        <p>
+          高消耗後能量重建。<br/>
+          適用於連續訓練後，
+          出現恢復節奏明顯拉長的狀態。
+        </p>
+        <a class="link-underline" href="../systems/energy-rebuild.html">
+          View system →
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hint">
+      ＊Systems 頁是地圖，不是決策流程。  
+      如果你想快速找到適合的方向，請回到
+      <a class="link-underline" href="../start/index.html">從訓練狀態開始</a>。
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

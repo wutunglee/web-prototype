@@ -1,0 +1,287 @@
+/* =====================================================
+   PulsarPump – Systems Pages (v1.3 unified)
+   Depends on base.css
+===================================================== */
+
+/* -----------------------------------------------------
+   Generic Hero (used by systems index / generic pages)
+----------------------------------------------------- */
+.hero{
+  background:#111;
+  color:#fff;
+  border-bottom:1px solid #111;
+}
+.hero p{ color:#d8d8d8; }
+
+/* hero 內部容器通用 padding */
+.hero-inner{
+  padding:64px 24px 56px 24px;
+}
+
+/* CTA row in hero */
+.hero-cta{
+  margin-top:18px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* Hero buttons */
+.hero .btn-primary{
+  background:#fff;
+  color:#111;
+  font-weight:650;
+}
+.hero .btn-secondary{
+  color:#fff;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  border-bottom:0;
+}
+
+/* =====================================================
+   Hero Topbar (Logo) — 對齊 index.html 的位置感
+   ✅ 鎖住 img 高度，避免變超大
+===================================================== */
+.hero-topbar{
+  padding:20px 0 0 0;   /* index 類似的「上方呼吸」 */
+  position:relative;
+  z-index:3;
+}
+
+.hero-topbar .brand{
+  display:inline-block;
+  line-height:0;        /* 避免 img 下方留空隙 */
+}
+
+.hero-topbar .brand img{
+  height:34px;          /* ✅ 關鍵：鎖定 logo 高度（不會爆大） */
+  width:auto;
+  display:block;
+}
+
+/* -----------------------------------------------------
+   Meta pills (used in some pages)
+----------------------------------------------------- */
+.meta{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:14px;
+  color:var(--muted);
+  font-size:14px;
+}
+.pill{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:6px 12px;
+  background:#fff;
+}
+
+/* -----------------------------------------------------
+   Systems overview diagram
+----------------------------------------------------- */
+.viz{
+  margin-top:20px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+}
+.viz-inner{ padding:14px; }
+
+.hint{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* -----------------------------------------------------
+   System cards / links
+----------------------------------------------------- */
+.sys-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  background:#fff;
+}
+.sys-card .tag{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.sys-card ul{
+  margin:12px 0 0 0;
+  padding-left:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+.sys-card li{ margin-bottom:6px; }
+
+.sys-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:14px;
+}
+
+/* -----------------------------------------------------
+   Flow / alignment blocks
+----------------------------------------------------- */
+.flow{ background:var(--soft); }
+
+.flow-steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+.step,
+.mini{
+  border-top:1px solid var(--text);
+  padding-top:12px;
+  color:var(--muted);
+  font-size:14px;
+}
+.mini strong{ color:var(--text); }
+
+/* =====================================================
+   System Hero – Unified Spec (for each system page)
+   ✅ 控制首屏高度、避免 CTA 下方大空洞
+   ✅ 修正：h1 變黑/看不到（強制白色）
+   ✅ 修正：logo 與 breadcrumb 太近（增加間距）
+===================================================== */
+.system-hero{
+  background:#111;
+  color:#fff;
+
+  /* 覆蓋 base.css 的 section padding，避免首屏被撐高 */
+  padding:0;
+  border-bottom:1px solid #111;
+}
+
+/* 首屏高度與內距 */
+.system-hero .hero-inner{
+  min-height:66vh;
+  padding:54px 24px 36px 24px; /* ✅ 稍微降一點，讓上方不要太擠也不會太空 */
+}
+
+/* ✅ 關鍵：把 breadcrumb 往下推一點，跟 index 的呼吸感一致 */
+.system-hero .breadcrumb{
+  margin-top:22px;      /* ✅ 拉開與 logo 的距離 */
+}
+
+/* 系統頁 hero 內文字（含 h1/h2/h3）一律白色 */
+.system-hero h1,
+.system-hero h2,
+.system-hero h3{
+  color:#fff;
+}
+
+/* Kicker / Description */
+.system-kicker{
+  font-size:13px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.65);
+  margin-bottom:10px;
+}
+.system-desc{
+  max-width:760px;
+  font-size:16px;
+  line-height:1.7;
+  color:rgba(255,255,255,0.85);
+}
+
+/* Tags pills */
+.system-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+  padding:0;
+  list-style:none;
+}
+.system-tags li{
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:999px;
+  padding:6px 12px;
+  font-size:13px;
+  color:rgba(255,255,255,0.9);
+}
+
+.system-hero p,
+.system-hero li,
+.system-hero .system-desc,
+.system-hero .system-kicker,
+.system-hero .context-bridge{
+  color:rgba(255,255,255,0.85);
+}
+
+/* Breadcrumb (white version for dark hero) */
+.system-hero .breadcrumb{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:rgba(255,255,255,0.65);
+  margin-bottom:14px;
+}
+.system-hero .breadcrumb a{
+  color:rgba(255,255,255,0.85);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+.system-hero .breadcrumb a:hover{
+  border-bottom-color:rgba(255,255,255,0.6);
+}
+.system-hero .breadcrumb span{ white-space:nowrap; }
+
+/* System hero links/buttons */
+.system-hero a{ color:#fff; }
+
+.system-hero .btn-primary{
+  background:#fff;
+  color:#111;
+  font-weight:650;
+}
+
+.system-hero .btn-secondary{
+  color:#fff;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  border-bottom:0;
+}
+
+/* ---------- System Variants ---------- */
+.system-hero--performance{ background:#111; }
+.system-hero--neural{ background:#0f0f0f; }
+.system-hero--recovery{ background:#101417; }
+.system-hero--energy{ background:#121212; }
+
+/* -----------------------------------------------------
+   Responsive
+----------------------------------------------------- */
+@media(max-width:600px){
+  .hero-inner{
+    padding:52px 20px 46px 20px;
+  }
+
+  .hero-topbar{
+    padding:18px 0 0 0;
+  }
+  .hero-topbar .brand img{
+    height:20px;        /* 手機略小一點更舒服 */
+  }
+
+  .system-hero .hero-inner{
+    min-height:62vh;
+    padding:48px 20px 30px 20px;
+  }
+
+  .system-hero .breadcrumb{
+    margin-top:18px;    /* 手機也保持呼吸 */
+  }
+}

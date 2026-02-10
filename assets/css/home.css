@@ -1,0 +1,331 @@
+/* =========================================================
+   PulsarPump – Home CSS v1.2
+   Homepage only styles
+   Depends on: assets/css/base.css
+   ========================================================= */
+
+/* =========================
+   HOME: layout overrides
+========================= */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+h1{
+  font-size:clamp(32px,6vw,52px);
+  margin:0 0 18px 0;
+  line-height:1.15;
+}
+
+h2{
+  margin-bottom:18px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-wrap{
+  background:#000;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Brand Topbar */
+.hero-topbar{
+  padding:18px 0 0 0;
+  position:relative;
+  z-index:3;
+}
+
+.brand img{
+  height:34px;
+  width:auto;
+  display:block;
+}
+
+/* Hero Layout */
+.hero{
+  position:relative;
+  z-index:2;
+}
+
+.hero-inner{
+  min-height:62vh;
+  display:flex;
+  align-items:flex-end;
+  padding-bottom:64px; /* 你想讓黑色底更往下：調大這個 */
+}
+
+.hero-content{
+  max-width:760px;
+}
+
+.hero p{
+  color:#ddd;
+  font-size:17px;
+  margin-bottom:22px;
+}
+
+.hero-cta{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* 首頁主按鈕要白底：只在首頁覆寫 */
+.btn-primary{
+  background:#fff;
+  color:#000;
+  padding:14px 22px;
+  text-decoration:none;
+  font-weight:650;
+  display:inline-block;
+}
+
+/* =========================
+   SYSTEM VISUAL (B方案)
+========================= */
+.system-visual{
+  position:absolute;
+  top:0;
+  right:0;
+  width:55%;
+  height:100%;
+  pointer-events:none;
+  opacity:.55;
+}
+
+.system-visual svg{
+  width:100%;
+  height:100%;
+}
+
+/* =========================
+   DECISION SECTION (peek)
+========================= */
+.decision-section{
+  background:#fff;
+  margin-top:-16px;      /* 露出效果：更「只露一行」→ 改更接近 0，例如 -6 */
+  padding-top:56px;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
+  position:relative;
+  z-index:5;
+}
+
+.decision-intro{
+  font-size:17px;
+  max-width:760px;
+  margin-bottom:28px;
+  color:var(--muted);
+}
+
+.decision-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.decision-item{
+  border-top:1px solid var(--text);
+  padding-top:14px;
+}
+
+.decision-item a{
+  text-decoration:none;
+  color:var(--text);
+  display:block;
+}
+
+.decision-item span{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.decision-followup{
+  margin-top:28px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  font-size:14px;
+  color:var(--muted);
+  max-width:720px;
+}
+
+.decision-followup a{
+  margin-left:6px;
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+}
+
+/* =========================
+   TRUST
+========================= */
+.trust{
+  background:var(--soft);
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:28px;
+  margin-top:28px;
+}
+
+.trust-item{
+  border-top:1px solid var(--text);
+  padding-top:14px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+
+/* Fix: hero-dark 下 btn-primary 文字被套成白色，導致白底看不到 */
+.hero-dark .btn-primary{
+  background:#fff;
+  color:#000 !important;
+  border-color:#fff;
+}
+
+.hero-dark .btn-primary:hover{
+  background:rgba(255,255,255,.92);
+}
+
+/* hero-dark 下的次要按鈕維持白字底線/描邊 */
+.hero-dark .btn-secondary{
+  color:#fff;
+  border-color:rgba(255,255,255,.35);
+}
+
+.hero-dark .btn-secondary:hover{
+  border-color:rgba(255,255,255,.6);
+}
+
+/* ------------------------------
+   Footer CTA Lite (reduce heaviness)
+------------------------------ */
+.footer-cta-lite{
+  padding:72px 0 64px;
+  border-top:1px solid var(--line);
+}
+
+.footer-cta-lite h2{
+  margin:0 0 10px 0;
+}
+
+.footer-cta-desc{
+  margin:0 0 22px 0;
+  color:var(--muted);
+  max-width:720px;
+}
+
+.footer-cta-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:26px;
+}
+
+.footer-quick{
+  margin-top:10px;
+  padding-top:18px;
+  border-top:1px solid rgba(0,0,0,.06);
+}
+
+.footer-quick-title{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+.footer-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.footer-cta-lite .pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+  border:1px solid var(--line);
+  padding:8px 12px;
+  border-radius:999px;
+  background:#fff;
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.footer-cta-lite .pill:hover{
+  color:var(--text);
+}
+
+.footer-links-lite{
+  margin-top:18px;
+  font-size:13px;
+  color:var(--muted);
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.footer-links-lite span{
+  opacity:.6;
+}
+
+/* Home: products concept section */
+.home-products{
+  padding:72px 0;
+  background:#fff;
+}
+.home-products__intro{
+  margin-top:10px;
+  color:var(--muted);
+  max-width:860px;
+  line-height:1.7;
+}
+.home-products__grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.home-products__card{
+  border-top:1px solid var(--text);
+  padding-top:16px;
+}
+.home-products__kicker{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.home-products__card h3{
+  margin:0 0 10px 0;
+}
+.home-products__card p{
+  margin:0 0 12px 0;
+  color:var(--muted);
+  line-height:1.75;
+}
+.home-products__bullets{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  line-height:1.75;
+  font-size:14px;
+}
+.home-products__links{
+  margin-top:14px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.home-products__note{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:14px;
+}

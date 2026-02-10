@@ -1,0 +1,222 @@
+/* products.css — Products page only */
+
+.products-hero{
+  padding:48px 0 10px 0;
+}
+
+.products-toplink{ margin:0 0 12px 0; }
+
+.products-intro{
+  max-width:860px;
+  color:var(--muted);
+  margin-top:10px;
+  line-height:1.8;
+}
+
+.products-jump{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.products-section{
+  padding:42px 0;
+}
+
+.products-section--soft{
+  background:var(--soft);
+}
+
+.section-head .kicker{
+  font-size:13px;
+  color:var(--muted);
+  letter-spacing:.02em;
+  margin-bottom:6px;
+}
+
+.section-desc{
+  max-width:860px;
+  color:var(--muted);
+  line-height:1.8;
+  margin-top:10px;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+  margin-top:22px;
+}
+
+.p-card{
+  border-top:1px solid var(--text);
+  padding-top:16px;
+}
+
+.p-meta{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.p-card p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.p-actions{ margin-top:12px; }
+
+.products-bottom{
+  margin-top:26px;
+  font-size:14px;
+  color:var(--muted);
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.products-bottom .dot{ opacity:.6; }
+
+/* Products hero 延續 system 視覺 */
+
+.products-hero .products-intro{
+  max-width: 720px;
+  margin-top: 12px;
+}
+
+.products-hero .products-jump{
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+/* ===== Products Hero: match system pages ===== */
+.products-hero-dark{
+  /* system-hero 已經黑底的話，這段可保守留著 */
+}
+
+.products-hero-desc{
+  max-width: 760px;
+  margin-top: 12px;
+}
+
+/* 讓 Products hero 內距稍微更鬆（避免擠） */
+.products-hero-dark .hero-inner{
+  padding-bottom: 44px;
+}
+
+/* ===== Jump bar (white) ===== */
+.products-jumpbar{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+
+.products-jumpbar .products-jump{
+  padding: 16px 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+/* pills 若在白底太「重」，讓它更像導覽 */
+.products-jumpbar .pill{
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--text);
+}
+
+/* 手機上避免太擠 */
+@media (max-width: 640px){
+  .products-hero-dark .hero-inner{
+    padding-bottom: 32px;
+  }
+  .products-jumpbar .products-jump{
+    gap:10px;
+  }
+}
+
+/* ===== Products Filter Bar ===== */
+.products-filterbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.products-filter{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  padding: 14px 0;
+  align-items:center;
+}
+
+.pill-btn{
+  appearance:none;
+  -webkit-appearance:none;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:14px;
+  cursor:pointer;
+  line-height:1;
+}
+
+.pill-btn.is-active{
+  background: var(--text);
+  color:#fff;
+  border-color: var(--text);
+}
+
+.products-filterhint{
+  font-size:13px;
+  color: var(--muted);
+  padding: 0 0 12px 0;
+}
+
+/* hide sections when filtered */
+.products-section.is-hidden{
+  display:none;
+}
+
+/* ===== Hero: make it less empty ===== */
+.products-hero-desc{
+  max-width: 760px;
+}
+
+/* 三點說明：讓 hero 內容「變厚」但不吵 */
+.products-hero-points{
+  margin: 16px 0 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 760px;
+  color: rgba(255,255,255,.82);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.products-hero-points li{
+  margin: 6px 0;
+}
+.products-hero-points strong{
+  color: rgba(255,255,255,.95);
+}
+
+/* hero 內的 CTA：讓使用者在黑底就知道下一步 */
+.products-hero-cta{
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* 若你覺得 hero 還是太高，可在這裡微調 padding */
+.products-hero-dark .hero-inner{
+  padding-bottom: 34px; /* 原本若更大，這裡可再縮 */
+}

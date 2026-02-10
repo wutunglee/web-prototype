@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/systems.css">
+  <title>從訓練狀態開始選擇補給｜PulsarPump</title>
+
+  <style>
+    /* page-only */
+    .start-desc{ max-width:760px; }
+
+    .jumpbar{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .jumpbar a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.35);
+      color:rgba(255,255,255,.88);
+      text-decoration:none;
+      font-size:14px;
+      line-height:1;
+    }
+    .jumpbar a:hover{ border-color:rgba(255,255,255,.6); }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+      margin-top:24px;
+    }
+    .card{
+      border-top:1px solid var(--text);
+      padding-top:16px;
+      scroll-margin-top: 110px; 
+    }
+    .tag{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+    .card p{
+      margin:10px 0 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .card .link-underline{ display:inline-block; margin-top:12px; }
+
+    .helper{ background:var(--soft); }
+    .pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:14px;
+    }
+    .pill{
+      font-size:14px;
+      border:1px solid var(--line);
+      padding:8px 14px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--muted);
+    }
+
+    .tag-warn{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+
+    .start-subhint{
+      margin-top:10px;
+      font-size:13px;
+      color:rgba(255,255,255,0.62);
+      max-width:760px;
+      line-height:1.65;
+    }
+    .start-subhint a{
+      color:rgba(255,255,255,0.82);
+      text-decoration:underline;
+      text-underline-offset:3px;
+      text-decoration-thickness:1px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Hero (system-style) -->
+<section class="hero system-hero">
+
+  <div class="hero-topbar">
+    <div class="container">
+      <a class="brand" href="../index.html" aria-label="PulsarPump 首頁">
+        <img src="../assets/img/pulsarpumplogo_white.png" alt="PulsarPump">
+      </a>
+    </div>
+  </div>
+
+  <div class="container hero-inner">
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">首頁</a>
+      <span>/</span>
+      <span>Start</span>
+    </nav>
+
+    <div class="system-kicker">Start｜從狀態開始</div>
+
+    <h1>根據你現在的狀態<br>我們給你對應的策略</h1>
+
+    <p class="system-desc start-desc">
+      不需要懂成分，也不用看完全部。<br>
+      先點一個最像你現在的狀態，直接進入對應系統。
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn-primary" href="../products/index.html">直接看產品</a>
+      <a class="btn-secondary" href="../index.html">回首頁</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Cards -->
+<section>
+  <div class="container">
+    <h2>你現在最接近哪一種狀態？</h2>
+
+    <div class="cards">
+      <div class="card" id="heat">
+        <div class="tag">🔥 炎熱高溫</div>
+        <h3>流汗一多就開始亂</h3>
+        <p>重點不是補更多，而是把「能量 × 電解質」的節奏穩住。</p>
+        <a class="link-underline" href="../systems/performance-core.html">
+          進入 → 穩定輸出（Performance Core）
+        </a>
+      </div>
+
+      <div class="card" id="endurance">
+        <div class="tag">🏃 長距離耐力</div>
+        <h3>不是爆掉，是後段慢慢掉</h3>
+        <p>時間拉長後，你需要的是節奏與耐受，不是更刺激的補給。</p>
+        <a class="link-underline" href="../systems/performance-core.html">
+          進入 → 穩定輸出（Performance Core）
+        </a>
+      </div>
+
+      <div class="card" id="neural">
+        <div class="tag">⚡ 高強度啟動</div>
+        <h3>要進入狀態，最後再推一段</h3>
+        <p>適合比賽日、間歇訓練、重量訓練：高強度啟動，保持狀態，並且後段續推。</p>
+        <a class="link-underline" href="../systems/neural-drive.html">
+          進入 → 高強度啟動（Neural Drive）
+        </a>
+      </div>
+
+      <div class="card" id="recovery">
+        <div class="tag">🔄 恢復與重建</div>
+        <h3>不是輸出問題，是底盤不穩</h3>
+        <p>訓練量高、作息不穩、壓力偏高：需要能長期配合的日常底盤。</p>
+        <a class="link-underline" href="../systems/recovery-base.html">
+          進入 → 恢復與重建（Recovery Base）
+        </a>
+      </div>
+
+      <div class="card" id="energy">
+        <div class="tag tag-warn">⚠️ 高消耗週期</div>
+        <h3>今天過關，但隔天回不來</h3>
+        <p>多半不是耐力問題，是週期被拉空：要處理能量銜接與重建。</p>
+        <a class="link-underline" href="../systems/energy-rebuild.html">
+          進入 → 能量重建（Energy Rebuild）
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Helper -->
+<section class="helper">
+  <div class="container">
+    <h2>快速對照</h2>
+
+    <div class="pills">
+      <div class="pill">今天很熱、流汗很多 → <a class="link-underline" href="../systems/performance-core.html">穩定輸出</a></div>
+      <div class="pill">後段越來越亂 → <a class="link-underline" href="../systems/performance-core.html">穩定輸出</a></div>
+      <div class="pill">比賽日／關鍵課表 → <a class="link-underline" href="../systems/neural-drive.html">高強度啟動</a></div>
+      <div class="pill">隔天開始回不來 → <a class="link-underline" href="../systems/energy-rebuild.html">能量重建</a></div>
+      <div class="pill">作息不穩、量很高 → <a class="link-underline" href="../systems/recovery-base.html">恢復與重建</a></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
