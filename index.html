@@ -4,244 +4,268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="stylesheet" href="./assets/css/base.css">
-  
   <title>PulsarPump｜從訓練狀態開始選擇補給</title>
 
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
+
   <style>
-    .container{
-      max-width:1200px;
-      margin:0 auto;
-    }
-
-    h1{
-      font-size:clamp(32px,6vw,52px);
-      margin:0 0 18px 0;
-    }
-
-    /* HERO (non-full, shows next section) */
-    .hero-wrap{
-      background:#000;
-      color:#fff;
-      /* 這裡故意不做 border-bottom，讓下方更像「連續內容」 */
-      padding:56px 0 28px 0;
-    }
-
-    .hero{
-      padding:0 24px;
-    }
-
-    .hero-inner{
-      max-width:1200px;
-      margin:0 auto;
-      /* 讓 Hero 不滿版：用高度控制節奏 */
-      min-height: 62vh; /* 你可以改 58–68vh */
+    /* ✅ 降級 systems/index：不當主按鈕，只做小連結 */
+    .hero-sub-links{
+      margin-top:12px;
+      font-size:14px;
+      color:rgba(255,255,255,.72);
       display:flex;
-      align-items:flex-end; /* 文字靠下，畫面更有「落點」 */
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
     }
-
-    .hero-content{
-      width:100%;
-      padding-bottom: 10px; /* 讓內容靠近下緣，但仍有呼吸 */
-    }
-
-    .hero p{
-      color:#ddd;
-    }
-
-    .btn-primary{
-      background:#fff;
-      color:#000;
-      padding:14px 22px;
-      text-decoration:none;
-      font-weight:650;
-      display:inline-block;
-    }
-
-    .btn-secondary{
-      color:#fff;
-      text-decoration:none;
-      border-bottom:1px solid #fff;
-      padding-bottom:2px;
-      font-size:14px;
-    }
-
-    /* 讓第二區塊露出：把它往上拉 */
-    .decision-section{
-      padding-top:48px;
-      margin-top:-26px; /* ← 這就是「露出第二區塊」的關鍵 */
-      background:#fff;
-      position:relative;
-      z-index:2;
-      border-top-left-radius:18px;
-      border-top-right-radius:18px;
-    }
-
-    .decision-intro{
-      font-size:17px;
-      max-width:760px;
-      margin-bottom:28px;
-      color:var(--muted);
-    }
-
-    .decision-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
-    }
-
-    .decision-item{
-      border-top:1px solid var(--text);
-      padding-top:14px;
-    }
-
-    .decision-item a{
-      text-decoration:none;
-      color:var(--text);
-      display:block;
-    }
-
-    .decision-item span{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* TRUST */
-    .trust{
-      background:var(--soft);
-    }
-
-    .trust-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:28px;
-      margin-top:28px;
-    }
-
-    .trust-item{
-      border-top:1px solid var(--text);
-      padding-top:14px;
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    /* FINAL CTA */
-    .final-cta{
-      text-align:center;
-      border-bottom:none;
-    }
-
-    .final-cta a{
-      text-decoration:none;
-      color:var(--text);
-      border-bottom:1px solid var(--text);
-      padding-bottom:2px;
-      font-size:15px;
-    }
-
-    @media(max-width:600px){
-      .hero{padding:0 20px;}
-      .hero-inner{min-height:58vh;}
-      .decision-section{margin-top:-18px;}
+    .hero-sub-links a{
+      color:rgba(255,255,255,.9);
+      text-decoration:underline;
+      text-underline-offset:3px;
+      text-decoration-thickness:1px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO (non-full) -->
-<div class="hero-wrap">
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="hero-content container">
-        <h1>不是每一種訓練，<br/>都該用同一種補給</h1>
-        <p>
-          PulsarPump 把補給視為訓練的一部分。<br/>
-          從你的訓練狀態開始，選擇真正適合的補給策略。
-        </p>
+<!-- HERO -->
+<div class="hero-wrap hero-dark">
 
+  <!-- Brand -->
+  <div class="hero-topbar">
+    <div class="container">
+      <a class="brand" href="./index.html" aria-label="PulsarPump 首頁">
+        <img src="./assets/img/pulsarpumplogo_white.png" alt="PulsarPump">
+      </a>
+    </div>
+  </div>
+
+  <!-- Abstract System Visual -->
+  <div class="system-visual" aria-hidden="true">
+    <svg viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="white" stroke-opacity="0.25" stroke-width="1">
+        <line x1="120" y1="80" x2="420" y2="180"/>
+        <line x1="420" y1="180" x2="300" y2="420"/>
+        <line x1="300" y1="420" x2="500" y2="620"/>
+        <line x1="180" y1="260" x2="300" y2="420"/>
+        <line x1="120" y1="80" x2="180" y2="260"/>
+      </g>
+      <g fill="white" fill-opacity="0.35">
+        <circle cx="120" cy="80" r="3"/>
+        <circle cx="420" cy="180" r="3"/>
+        <circle cx="180" cy="260" r="3"/>
+        <circle cx="300" cy="420" r="3"/>
+        <circle cx="500" cy="620" r="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero">
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <h1>不是每一種訓練，<br/>都該用同一種補給</h1>
+        <p>補給不是加油，是訓練策略的一部分。</p>
+
+        <!-- ✅ 主入口：start；次入口：products -->
         <div class="hero-cta">
           <a href="./start/index.html" class="btn-primary">依訓練狀態選擇補給</a>
-          <a href="./systems/index.html" class="btn-secondary">先看四大補給系統總覽</a>
+          <a href="./products/index.html" class="btn-secondary">產品總覽</a>
         </div>
 
-        <div style="margin-top:10px;">
-          <a href="#" class="btn-secondary">直接查看所有產品</a>
+        <!-- ✅ systems/index 降級 -->
+        <div class="hero-sub-links">
+          <a href="./systems/index.html">想先理解四大系統分工？看總覽 →</a>
         </div>
+
       </div>
     </div>
   </div>
 </div>
 
-<!-- DECISION (intentionally peeking) -->
+<!-- ✅ NEW: PRODUCTS (Concept categories, not SKU list) -->
+<section class="home-products">
+  <div class="container">
+    <h2>三種補給角色，對應三種最常見的需求</h2>
+    <p class="home-products__intro">
+      不是把所有產品擺出來，而是先讓你用「用途」找到方向：穩住、啟動、重建。
+    </p>
+
+    <div class="home-products__grid">
+
+      <!-- 1) Performance -->
+      <article class="home-products__card">
+        <div class="home-products__kicker">Performance｜穩定輸出</div>
+        <h3>在高溫、長時間、後段失序時<br/>把節奏撐住</h3>
+        <p>
+          當你流汗變多、心率拉高、時間一拉長就開始亂，
+          重點不是「再多吃一包」，而是讓能量與電解質能被穩定使用。
+        </p>
+        <ul class="home-products__bullets">
+          <li>適用：炎熱高溫、長距離耐力、長時間高心率</li>
+          <li>核心觀念：能量 × 電解質協同、耐受與節奏管理</li>
+        </ul>
+        <div class="home-products__links">
+          <a class="link-underline" href="./systems/performance-core.html">看策略與系統 →</a>
+          <a class="link-underline" href="./products/index.html?tag=performance">看對應產品 →</a>
+        </div>
+      </article>
+
+      <!-- 2) Neural -->
+      <article class="home-products__card">
+        <div class="home-products__kicker">Neural｜高強度啟動</div>
+        <h3>需要進入狀態，<br/>並在最後再推一段</h3>
+        <p>
+          比賽日、間歇或重量訓練，關鍵不只是「提神」，
+          而是把啟動與後段續推做成同一套策略，避免前衝後掉。
+        </p>
+        <ul class="home-products__bullets">
+          <li>適用：比賽日、關鍵課表、間歇、重量訓練</li>
+          <li>核心觀念：啟動＋中後段續推的兩段式節奏</li>
+        </ul>
+        <div class="home-products__links">
+          <a class="link-underline" href="./systems/neural-drive.html">看策略與系統 →</a>
+          <a class="link-underline" href="./products/index.html?tag=neural">看對應產品 →</a>
+        </div>
+      </article>
+
+      <!-- 3) Rebuild -->
+      <article class="home-products__card">
+        <div class="home-products__kicker">Rebuild｜恢復與能量重建</div>
+        <h3>不是今天撐不住，<br/>是隔天開始回不來</h3>
+        <p>
+          課表完成但恢復越來越慢，常見問題是「週期被拉空」。
+          這條線處理的是底盤與能量銜接，讓你回到可訓練狀態。
+        </p>
+        <ul class="home-products__bullets">
+          <li>適用：堆量週期、連訓、作息不穩、壓力偏高</li>
+          <li>核心觀念：把系統補回來，而不是靠刺激硬撐</li>
+        </ul>
+        <div class="home-products__links">
+          <a class="link-underline" href="./start/index.html#energy">從「回不來」開始判斷 →</a>
+          <a class="link-underline" href="./products/index.html?tag=rebuild">看對應產品 →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="home-products__note">
+      不確定自己屬於哪一種？<a class="link-underline" href="./start/index.html">從訓練狀態開始 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DECISION -->
+<!--
 <section class="decision-section">
   <div class="container">
     <h2>你現在最接近哪一種訓練狀態？</h2>
-    <div class="decision-intro">
-      不需要一次選對全部。只要從「此刻最需要處理的狀態」開始，
-      我們會帶你到適合的補給系統。
-    </div>
 
-    <div style="margin-bottom:22px;">
-        <a href="./systems/index.html"  class="link-underline">
-            想先看完整補給系統架構？→ 四大系統總覽
-        </a>
+    <div class="decision-intro">
+      從你此刻最需要處理的狀態開始（點選後會帶你到 start 做同一套判斷）。
     </div>
 
     <div class="decision-grid">
       <div class="decision-item">
-        <a href="./systems/performance-core.html">
+        <a href="./start/index.html#heat">
           <strong>🔥 炎熱高溫</strong><br/>
           <span>在悶熱與大量流汗下維持穩定輸出</span>
         </a>
       </div>
 
       <div class="decision-item">
-        <a href="./systems/performance-core.html">
+        <a href="./start/index.html#endurance">
           <strong>🏃 長距離耐力</strong><br/>
           <span>把節奏穩定地撐到後段</span>
         </a>
       </div>
 
       <div class="decision-item">
-        <a href="./systems/neural-drive.html">
+        <a href="./start/index.html#neural">
           <strong>⚡ 高強度啟動</strong><br/>
           <span>進入狀態，並在接近力竭時再接再厲</span>
         </a>
       </div>
 
       <div class="decision-item">
-        <a href="./systems/recovery-base.html">  
+        <a href="./start/index.html#recovery">
           <strong>🔄 恢復與重建</strong><br/>
           <span>為下一堂課準備好訓練底盤</span>
         </a>
       </div>
     </div>
+
+    <div class="decision-followup">
+      <p>
+        如果你發現問題並非當下受不了，<br/>
+        而是隔天、隔兩天開始狀態跟不上，<br/>
+        那你要處理的，是<strong>高消耗之後的能量銜接</strong>。
+        <a href="./start/index.html#energy">看看能量重建 →</a>
+      </p>
+    </div>
   </div>
 </section>
+-->
 
 <!-- TRUST -->
 <section class="trust">
   <div class="container">
-    <h2>為什麼是 PulsarPump？</h2>
+    <h2>我們想處理的，不只是「補不補」</h2>
 
     <div class="trust-grid">
-      <div class="trust-item">醫師研發，從臨床與實際訓練經驗出發</div>
-      <div class="trust-item">專注於長時間、高心率與高溫條件下的耐受設計</div>
-      <div class="trust-item">不靠「最強」形容補給，而是把策略做清楚</div>
-      <div class="trust-item">補給不是一次性，而是訓練週期的一部分</div>
+      <div class="trust-item">
+        很多時候，狀態變差不是因為不夠努力，<br/>
+        而是補給開始跟不上訓練的節奏。
+      </div>
+
+      <div class="trust-item">
+        PulsarPump 在意的是：<br/>
+        在高心率、高溫、長時間的狀態下，<br/>
+        補給是否真的能被身體穩定使用。
+      </div>
+
+      <div class="trust-item">
+        我們不把補給當成一次性的刺激，<br/>
+        而是視為訓練週期中，<br/>
+        能讓下一次輸出順利發生的基礎。
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
+<!-- LIGHT FOOTER CTA (lighter) -->
+<section class="footer-cta-lite">
   <div class="container">
-    <p>不知道從哪裡開始？</p>
-    <a href="./start/index.html">從訓練狀態開始選擇補給 →</a>
-    <div style="margin-top:10px;">
-      <a href="./systems/index.html">先理解四大補給系統 →</a>
+
+    <!-- ✅ footer 主：start；次：products -->
+    <div class="footer-cta-row">
+      <a class="btn-primary" href="./start/index.html">從訓練狀態開始 →</a>
+      <a class="btn-secondary" href="./products/index.html">直接看產品 →</a>
     </div>
+
+    <!-- ✅ 只留兩個 pill -->
+    <div class="footer-quick">
+      <div class="footer-quick-title">快速回到你的狀態</div>
+      <div class="footer-pills">
+        <a class="pill" href="./start/index.html#heat">🔥 流汗失序／高溫 → 進入判斷</a>
+        <a class="pill" href="./start/index.html#energy">⚠️ 隔天回不來 → 能量重建</a>
+      </div>
+    </div>
+
+    <!-- ✅ 輕量品牌連結 + systems 降級放這裡 -->
+    <div class="footer-links-lite" aria-label="Footer Links">
+      <a href="#" class="link-underline">關於 PulsarPump</a>
+      <span>·</span>
+      <a href="https://blog.pulsarpump.com/" class="link-underline" target="_blank" rel="noopener">研究與指南（Blog）</a>
+      <span>·</span>
+      <a href="./systems/index.html" class="link-underline">四大系統總覽</a>
+      <span>·</span>
+      <a href="./products/index.html" class="link-underline">Products</a>
+    </div>
+
   </div>
 </section>
 
